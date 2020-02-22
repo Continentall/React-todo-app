@@ -42,9 +42,7 @@ class CreateNote extends Component {
     alert('Необходимо ввести хот что-то')
 
   }
-
 }
-
     render() {
         return  <div className="Notes-Create Notes-Note">
             <textarea placeholder='Введите вашу заметку здесь'  ref={ this.inputRef } className="Notes-Create-Input" value={this.state.text} onChange={this.onTextChange}   ></textarea>

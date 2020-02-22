@@ -17,9 +17,9 @@ class App extends Component {
         this.setState(oldState => {
             return {
                 func: withoutIndex(oldState.func, indexToRemove)
-            };
-        });
-    };
+            }
+        })
+    }
     onNoteCreate = newNoteText => {
         this.setState(oldState => {
             return {

@@ -6,12 +6,12 @@ import Header from "./Header.js"
 class App extends Component {
     constructor(props) {
       super(props)
-      this.state = {
+      this.state = { 
           func: [
               'Приветствуем, что бы добавить план напишите текст и нажмите  "Save" '
           ]
       }
-
+   
     }
     onNoteDelete = indexToRemove => {
         this.setState(oldState => {
@@ -26,7 +26,7 @@ class App extends Component {
                 func: [newNoteText].concat(oldState.func)
             }
         })
-    }
+    }  
     render() {
         return  ( <div>
             <Header/>

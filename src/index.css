@@ -14,7 +14,7 @@ body {
  border: 1px solid #888;
  border-radius: 15px;
  margin-bottom: 1rem;
- background-color: white;
+ background-color: rgb(255, 255, 255);
 
 
 }
@@ -29,18 +29,22 @@ body {
 }
 .Notes-Note-Delete {
   position: absolute;
-  top: -1rem;
-  right: -1rem;
+  top: -0.3rem;
+  right: -0.6rem;
   width: 1.6rem;
   height: 1.6rem;
   background: #666;
   color: white;
   text-align: center;
-  line-height: 1.4rem;
+  line-height: 1.2rem;
   border-radius: 50%;
   font-size: 80%;
   cursor: pointer;
 }
+.Notes-Note-Delete:focus {
+  background-color: black;
+}
+
 
 .Notes-Create-Input {
  width: 100%;
@@ -57,39 +61,40 @@ body {
 .Notes-Create-Button {
 font-weight: 500 ;
 padding: 0.75rem 1.5rem ;
-
 color: white;
 cursor: pointer;
 -moz-border-radius:  5px; /* Firefox */
 -webkit-border-radius:  5px; /* Safari 4 */
 border-radius:  5px;
+border: none;
 
 
 }
 .Notes-Create-Button-Delete{
-  background: rgb(135,135,135);
-  background: linear-gradient(90deg, rgba(135,135,135,1) 0%, rgba(152,153,154,1) 79%);
+  
+  background: rgb(83, 83, 83);
   -moz-border-radius:  5px; /* Firefox */
   -webkit-border-radius:  5px; /* Safari 4 */
   border-radius:  5px;
   font-weight: 400 ;
+  border: none;
 }
 
 .Notes-Create-Button-Create {
-  background: rgb(43,219,206);
-  background: linear-gradient(90deg, rgba(43,219,206,1) 0%, rgba(24,252,146,1) 97%);
+background: rgb(93, 114, 182) ;
+border: none;
 }
 .Notes-Create-Button-Create:active {
-  background: rgb(97,214,156);
-background: linear-gradient(90deg, rgba(97,214,156,1) 0%, rgba(10,217,96,1) 79%);
+background: rgb(38, 53, 102) ;
+border: none;
 }
 .Notes-Create-Button-Delete:active {
-  background: rgb(104,106,105);
-background: linear-gradient(90deg, rgba(104,106,105,1) 0%, rgba(128,127,127,1) 79%);
+background: rgb(46, 47, 48) ;
+border: none;
 }
 .header {
-  background: rgb(43,219,206);
-  background: linear-gradient(90deg, rgba(43,219,206,1) 0%, rgba(24,252,146,1) 97%);
+  
+  background-color:rgb(93, 114, 182) ;
   color: #ffffff;
   position: fixed;
   z-index: 1;

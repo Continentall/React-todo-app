@@ -1,10 +1,10 @@
 import React, { Component} from 'react'
-import "./index.css"
+import './index.css'
 
 class Note extends Component {
     render() {
-    return <div className="Notes-Note">{this.props.text}
-    <span className="Notes-Note-Delete" onClick={this.props.onDelete}>&times;</span>
+    return <div className='Notes-Note'>{this.props.text}
+    <span className='Notes-Note-Delete' onClick={this.props.onDelete}>&times;</span>
     </div>
     }
 }
@@ -12,7 +12,7 @@ class CreateNote extends Component {
     constructor (props){
         super(props)
         this.state = {
-            text:""
+            text: ''
         }
         this.inputRef = React.createRef()
     }
@@ -23,7 +23,7 @@ class CreateNote extends Component {
     }
     onRecet = () => {
         this.setState ({
-            text: ""
+            text: ''
         })
         this.inputRef.current.focus ()
     }
@@ -35,20 +35,17 @@ class CreateNote extends Component {
         {
           this.props.onCreate(this.state.text)
          this.onRecet ()
-
       }
-      else {
-    
+         else {
     alert('Необходимо ввести хот что-то')
-
   }
 }
     render() {
-        return  <div className="Notes-Create Notes-Note">
-            <textarea placeholder='Введите вашу заметку здесь'  ref={ this.inputRef } className="Notes-Create-Input" value={this.state.text} onChange={this.onTextChange}   ></textarea>
-            <div className="Notes-Create-Buttons">
-                <button className="Notes-Create-Button Notes-Create-Button-Create " type="submit" onClick={this.onSave} >Save</button>
-                <button className="Notes-Create-Button Notes-Create-Button-Delete " type="submit" onClick={this.onRecet} >Delete</button>
+        return  <div className='Notes-Create Notes-Note'>
+            <textarea placeholder='Введите вашу заметку здесь'  ref={ this.inputRef } className='Notes-Create-Input' value={this.state.text} onChange={this.onTextChange} ></textarea>
+            <div className='Notes-Create-Buttons'>
+                <button className='Notes-Create-Button Notes-Create-Button-Create ' type='submit' onClick={this.onSave} >Save</button>
+                <button className='Notes-Create-Button Notes-Create-Button-Delete ' type='submit' onClick={this.onRecet} >Delete</button>
             </div>
         </div>
   } }
@@ -58,10 +55,10 @@ class CreateNote extends Component {
 class Notes extends Component {
     render() {
     return (
-    <div className="Notes">
+    <div className='Notes'>
         <CreateNote onCreate={this.props.onCreate} />
         <hr />
-        {this.props.func.map((text, index ) => {
+        {this.props.func.map((text, index) => {
             return <Note text={text} key={index} onDelete={()=> this.props.onDelete(index)} />
     }
         )

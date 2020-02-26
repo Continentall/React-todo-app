@@ -1,7 +1,7 @@
 import React, { Component} from 'react'
-import Notes from "./notes"
-import {withoutIndex} from "./utils.js"
-import Header from "./Header.js"
+import Notes from './notes'
+import {withoutIndex} from './utils.js'
+import Header from './Header.js'
 
 class App extends Component {
     constructor(props) {
